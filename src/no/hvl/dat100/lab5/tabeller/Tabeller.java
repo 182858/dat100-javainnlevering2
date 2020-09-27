@@ -31,14 +31,38 @@ public class Tabeller {
 	// c)
 	public static int summer(int[] tabell) {
 
-		// TODO
+		// Enhanced for-løkke
 		int result = 0;
 		for (int i : tabell) {
 			result += i;
 		}
 		return result;
 	}
+	
+	public static int summer2(int[] tabell) {
 
+		//While-løkke
+		int result = 0;
+		int i = 0;
+		
+		while (i < tabell.length) {
+			result += tabell[i];
+			i++;
+		}
+		return result;
+		
+	}
+		
+	
+	public static int summer3(int[] tabell) {
+		
+		int result = 0;
+		
+		for (int i = 0; i < tabell.length; i++) {
+			result += tabell[i];
+		}
+		return result;
+	}
 	// d)
 	public static boolean finnesTall(int[] tabell, int tall) {
 
