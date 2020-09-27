@@ -6,30 +6,63 @@ public class Matriser {
 	public static void skrivUt(int[][] matrise) {
 		
 		// TODO
-		throw new UnsupportedOperationException("skrivUt ikke implementert");
+		for (int rad = 0; rad < matrise.length; rad++) {
+		  
+			for (int kol = 0; kol < matrise[rad].length; kol++) {
+				System.out.printf("%5d", matrise[rad][kol]);
+			}
+		
+		System.out.println();
+		}
 	}
 
 	// b)
 	public static String tilStreng(int[][] matrise) {
 
 		// TODO
-		throw new UnsupportedOperationException("tilStreng ikke implementert");
-		
+		String resultat = "";
+		for (int rad = 0; rad < matrise.length; rad++) {
+			
+			for (int kol = 0; kol < matrise[rad].length; kol++) {
+				resultat = resultat + matrise[rad][kol] + " ";
+			}
+			resultat = resultat + "\n";
+		}
+		resultat = resultat.substring(0, resultat.length() - 1) + "\n";
+		return resultat;
 	}
 
 	// c)
 	public static int[][] skaler(int tall, int[][] matrise) {
 		
 		// TODO
-		throw new UnsupportedOperationException("skaler ikke implementert");
-	
+		int[][] nyMatrise = new int [matrise.length][matrise.length];
+		
+		for (int rad = 0; rad < matrise.length; rad++) {	
+			for (int kol = 0; kol < matrise[rad].length; kol++) {
+				nyMatrise[rad][kol] = matrise[rad][kol];
+				nyMatrise[rad][kol] = tall * nyMatrise[rad][kol];
+			}
+		}
+		return nyMatrise;
 	}
 
 	// d)
 	public static boolean erLik(int[][] a, int[][] b) {
 
 		// TODO
-		throw new UnsupportedOperationException("erLik ikke implementert");
+		int[][] matA = a;
+		int[][] matB = b;
+		boolean lik = false;
+		
+		for (int i = 0; i < matA.length; i++) {
+			for (int j = 0; j < matB.length; j++) {
+				if (matA [i][j] == matB [i][j]) {
+					lik = true;
+				}
+			}
+		}
+		return lik;
 	}
 	
 	// e)
